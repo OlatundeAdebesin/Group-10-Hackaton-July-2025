@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import MarketPlace from "./pages/MarketPlace";
 import Contact from "./pages/Contact";
-//import Features from "./pages/Features";
+import Features from "./pages/Features";
 //import ErrorPage from "./pages/ErrorPage"
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       {/* <Route path="/About" element={<About />} /> */}
       <Route path="/ProductPage" element={<ProductPage />} />
       <Route path="/marketplace" element={<MarketPlace />} />
-      {/* <Route path="/features" element={<Features />} /> */}
+      <Route path="/features" element={<Features />} />
       <Route path="/Contact" element={<Contact />} />
       {/* <Route path="*" element={<ErrorPage />} /> */}
     </Routes>
