@@ -1,11 +1,13 @@
 import React from "react";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import Navbar from "../components/NavBar";
 
 const Contact = () => {
   return (
     
 
-    <section className="min-h-screen bg-gradient-to-b from-gray-200 to-gray-200 flex flex-col justify-center px-6 py-12">   
+    <section className="min-h-screen bg-gradient-to-b from-gray-200 to-gray-200 flex flex-col justify-center">   
+      <Navbar />
       {/* Header Section */}
       <div className="text-center mb-10">
         <h1 className="text-5xl md:text-6xl font-extrabold text-blue-900 mb-4">

@@ -13,7 +13,7 @@ const Navbar = () => {
         }
   return (
     <section>
-        <nav className='flex justify-between lg:px-20 py-5'>
+        <nav className='flex justify-between px-3 lg:px-20 py-5'>
                     <img src={logo}></img>
                     <ul className='lg:flex gap-7 capitalize text-[#32497dc4] text-lg font-["plus jakarta Sans, san serif"] cursor-pointer hidden'>
                         <Link to="/"><li className='hover:text-orange-400'>home</li></Link>
@@ -29,12 +29,12 @@ const Navbar = () => {
 
          {isMobileNav && <nav className='bg-[#ccf5ee] absolute top-0 w-[100%] mt-28 h-[400px] lg:hidden'>
            <ul className='capitalize flex flex-col gap-10 px-4 pt-12 text-base'>
-            {/* <Link to="/"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>home</li></Link>
-            <Link to="/about"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>about us</li></Link>
-            <Link to="/products"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>products</li></Link>
-            <Link to="/marketplace"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>market place</li></Link>
-            <Link to="/features"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>features</li></Link>
-            <Link to="/contact"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>contact</li></Link> */}
+                        <Link to="/"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>home</li></Link>
+                        {/* <Link to="/about"><li className='hover:text-orange-400'>about us</li></Link> */}
+                        <Link to="/ProductPage"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>products</li></Link>
+                        <Link to="/marketplace"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>market place</li></Link>
+                        {/* <Link to="/features"><li className='hover:text-orange-400'>features</li></Link> */}
+                        <Link to="/Contact"><li className=' text-[#32497dc4] cursor-pointer hover:text-[#f2a341]'>contact</li></Link>
             </ul> 
           </nav>}
     </section>

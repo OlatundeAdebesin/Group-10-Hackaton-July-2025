@@ -6,6 +6,7 @@ import Products from '../components/Products'
 import Partners from '../components/Partners'
 import Testimonials from '../components/Testimonials'
 import Request from '../components/Request'
+import MarketHome from '../components/DashboardComponents/MarketHome'
 import Footer from '../components/Footer'
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
         <Partners />
         <Testimonials />  
         <Request />
+        <MarketHome />
         <Footer />
 
     </div>
