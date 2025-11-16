@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, Layers, Star, ShoppingCart, DollarSign, User, Search, Heart, TrendingUp, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SaaSProductList from '../components/SaaSProductList'
 
 function Button({ children, variant, size, className, ...rest }) {
   const base = 'inline-flex items-center justify-center rounded-md transition-colors';
@@ -102,16 +103,16 @@ function Sidebar({ collapsed, onToggle, isSellerView, onToggleView, onMenuSelect
 function Topbar({ query, setQuery, isSellerView }) {
   return (
     <div className="flex items-center justify-between gap-4 mb-6">
-      <input
+      {/* <input
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search apps, sellers or tags..."
         className={`max-w-xl border rounded-md px-3 py-2 w-full md:w-auto bg-white/90 backdrop-blur-md focus:outline-none focus:ring-2 ${isSellerView ? 'border-[#31587c] focus:ring-[#31587c]' : 'border-[#1CA6AF] focus:ring-[#1CA6AF]'}`}
-      />
+      /> */}
       <div className="flex items-center gap-3">
-        <Button variant="ghost" size="icon" className="hover:bg-white/20 text-black" aria-label="search">
+        {/* <Button variant="ghost" size="icon" className="hover:bg-white/20 text-black" aria-label="search">
           <Search size={18} />
-        </Button>
+        </Button> */}
         {isSellerView ? (
           <Button variant="ghost" size="icon" className="relative hover:bg-white/20 text-black" aria-label="users">
             <Users size={18} />
@@ -135,7 +136,44 @@ export default function Dashboard() {
   const [activePage, setActivePage] = useState('Explore');
 
   const buyerPages = {
-    Explore: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Explore Apps</h2><p className="text-gray-700">Discover innovative SaaS products.</p></CardContent></Card>,
+    Explore: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Explore Apps</h2><p className="text-gray-700">Discover innovative SaaS products.</p>
+    
+    <SaaSProductList />
+    
+    <div className="grid gap-4 mt-6">
+      <Card className="p-4 bg-white shadow-md border border-gray-200 cursor-pointer hover:shadow-lg transition" onClick={() => alert('View Top Rated Apps')}>
+        <CardContent>
+          <h3 className="font-semibold text-[#1CA6AF] mb-2">Top Rated Apps</h3>
+          <ul className="text-sm text-gray-700 list-disc ml-4">
+            <li>TaskFlow - 4.9★</li>
+            <li>CloudSync - 4.8★</li>
+            <li>MarketBoost - 4.8★</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card className="p-4 bg-white shadow-md border border-gray-200 cursor-pointer hover:shadow-lg transition" onClick={() => alert('View Best Selling Apps')}>
+        <CardContent>
+          <h3 className="font-semibold text-[#1CA6AF] mb-2">Best Selling Apps</h3>
+          <ul className="text-sm text-gray-700 list-disc ml-4">
+            <li>ConvertIQ - 4.7★</li>
+            <li>AdWise - 4.6★</li>
+            <li>FunnelPro - 4.7★</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card className="p-4 bg-white shadow-md border border-gray-200 cursor-pointer hover:shadow-lg transition" onClick={() => alert('View Recommended Apps')}>
+        <CardContent>
+          <h3 className="font-semibold text-[#1CA6AF] mb-2">Recommended Apps</h3>
+          <ul className="text-sm text-gray-700 list-disc ml-4">
+            <li>Boostify - 4.5★</li>
+            <li>AutoMailer - 4.5★</li>
+            <li>DataTrack - 4.6★</li>
+          </ul>
+        </CardContent>
+      </Card>
+    </div></CardContent></Card>,
     Featured: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Featured Apps</h2><p className="text-gray-700">Top picks for you.</p></CardContent></Card>,
     'My Orders': <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">My Orders</h2><p className="text-gray-700">Track your purchases and downloads.</p></CardContent></Card>,
     Wishlist: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Wishlist</h2><p className="text-gray-700">Your saved apps for later.</p></CardContent></Card>,

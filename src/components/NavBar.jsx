@@ -13,7 +13,7 @@ const Navbar = () => {
         }
   return (
     <section>
-        <nav className='flex justify-between px-3 lg:px-20 py-5'>
+        <nav className='flex justify-between px-3 lg:px-8 py-5'>
                     <img src={logo}></img>
                     <ul className='lg:flex gap-7 capitalize text-[#32497dc4] text-lg font-["plus jakarta Sans, san serif"] cursor-pointer hidden'>
                         <Link to="/"><li className='hover:text-orange-400'>home</li></Link>

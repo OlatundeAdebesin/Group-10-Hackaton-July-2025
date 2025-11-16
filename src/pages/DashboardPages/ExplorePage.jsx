@@ -1,6 +1,6 @@
 import { i } from 'framer-motion/client'
 import React from 'react'
-import Explore from '../components/DashboardComponents/Explore'
+import Explore from '../components/Explore'
 import Footer from '../components/Footer'
 const ExplorePage = () => {
   return (
