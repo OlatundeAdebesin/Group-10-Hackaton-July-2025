@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, Layers, Star, ShoppingCart, DollarSign, User, Search, Heart, TrendingUp, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
-import SaaSProductList from '../components/SaaSProductList'
+import SaaSProducts from '../components/SaaSProducts';
 
 function Button({ children, variant, size, className, ...rest }) {
   const base = 'inline-flex items-center justify-center rounded-md transition-colors';
@@ -138,7 +138,7 @@ export default function Dashboard() {
   const buyerPages = {
     Explore: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Explore Apps</h2><p className="text-gray-700">Discover innovative SaaS products.</p>
     
-    <SaaSProductList />
+    <SaaSProducts />
     
     <div className="grid gap-4 mt-6">
       <Card className="p-4 bg-white shadow-md border border-gray-200 cursor-pointer hover:shadow-lg transition" onClick={() => alert('View Top Rated Apps')}>
