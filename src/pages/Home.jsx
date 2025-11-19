@@ -7,6 +7,7 @@ import Partners from '../components/Partners'
 import Testimonials from '../components/Testimonials'
 import Request from '../components/Request'
 import Footer from '../components/Footer'
+import AuthPage from './AuthPage'
 
 const Home = () => {
   return (
@@ -20,7 +21,6 @@ const Home = () => {
         <Testimonials />  
         <Request />
         <Footer />
-
     </div>
 
     </section>
