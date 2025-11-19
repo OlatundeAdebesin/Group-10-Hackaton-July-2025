@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function HeroSection() {
   return (
@@ -7,7 +8,7 @@ function HeroSection() {
         <p className='text-xl text-orange-500 uppercase'>Welcome!</p>
         <h1 className='mt-5 text-4xl capitalize text-[#31587c] font-plus-jakarta text-center lg:text-6xl'>Powerful SaaS apps to</h1>
         <h1 className='text-4xl capitalize text-[#31587c] font-plus-jakarta text-center lg:text-6xl'>transform your business</h1>
-        <button className='bg-orange-400 text-white px-7 py-3 rounded-full mt-5 hover:bg-[#31587c] hover:cursor-pointer uppercase'>Get started</button>
+        <Link to="/marketplace"><button className='bg-orange-400 text-white px-7 py-3 rounded-full mt-5 hover:bg-[#31587c] hover:cursor-pointer uppercase'>Get started</button></Link>
     </div>
     <div>
         <img src="src/assets/dashboard-01-2048x1103.png" alt="" />

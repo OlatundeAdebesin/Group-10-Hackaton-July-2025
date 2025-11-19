@@ -9,6 +9,7 @@ import { SiCookiecutter } from 'react-icons/si'
 import { FaFacebook } from 'react-icons/fa'
 import { BsInstagram, BsTwitter } from 'react-icons/bs'
 import { LiaLinkedin } from 'react-icons/lia'
+import { Link } from 'react-router-dom'
 
 const ProductPage = () => {
 
@@ -70,7 +71,7 @@ const ProductPage = () => {
             <h3 className='text-lg font-[600] text-[#1ca6af] hover:text-[#f2a341] transition-transform cursor-pointer'> Intuitive task management system</h3>
             <h4 className='text-lg font-[600] text-[#1ca6af] hover:text-[#f2a341] transition-transform cursor-pointer'> Create and send targeted campaigns</h4>
             <h5 className='text-lg font-[600] text-[#1ca6af] hover:text-[#f2a341] transition-transform cursor-pointer'> Robust analytics features</h5>
-           <div><button className='capitalize bg-[#f2a341] px-7 py-4 rounded-full text-white font-bold text-lg hover:bg-[#1ca6af]'>View more</button></div>
+           <div><Link to="/marketplace"><button className='capitalize bg-[#f2a341] px-7 py-4 rounded-full text-white font-bold text-lg hover:bg-[#1ca6af]'>View more</button></Link></div>
             </div>
            </div>
            </div>
@@ -113,7 +114,7 @@ const ProductPage = () => {
             <h3 className='text-lg font-[600] text-[#1ca6af] hover:text-[#f2a341] transition-transform cursor-pointer'>Create and send targeted campaigns</h3>
             <h4 className='text-lg font-[600] text-[#1ca6af] hover:text-[#f2a341] transition-transform cursor-pointer'>Intuitive task management system</h4>
             <h5 className='text-lg font-[600] text-[#1ca6af] hover:text-[#f2a341] transition-transform cursor-pointer'>Robust analytics features</h5>
-           <div><button className='capitalize bg-[#f2a341] px-7 py-4 rounded-full text-white font-bold text-lg hover:bg-[#1ca6af]'>View more</button></div>
+           <div><Link to="/marketplace"><button className='capitalize bg-[#f2a341] px-7 py-4 rounded-full text-white font-bold text-lg hover:bg-[#1ca6af]'>View more</button></Link></div>
              </div>
             </div>
             </div>
@@ -156,7 +157,7 @@ const ProductPage = () => {
             <h3 className='text-lg font-[600] text-[#1ca6af] hover:text-[#f2a341] transition-transform cursor-pointer'>Robust analytics features</h3>
             <h4 className='text-lg font-[600] text-[#1ca6af] hover:text-[#f2a341] transition-transform cursor-pointer'>Create and send targeted campaigns</h4>
             <h5 className='text-lg font-[600] text-[#1ca6af] hover:text-[#f2a341] transition-transform cursor-pointer'>Intuitive task management system</h5>
-           <div><button className='capitalize bg-[#f2a341] px-7 py-4 rounded-full text-white font-bold text-lg hover:bg-[#1ca6af]'>View more</button></div>
+           <div><Link to="/marketplace"><button className='capitalize bg-[#f2a341] px-7 py-4 rounded-full text-white font-bold text-lg hover:bg-[#1ca6af]'>View more</button></Link></div>
              </div>
             </div>
             </div>
@@ -169,7 +170,7 @@ const ProductPage = () => {
              <h2 className='text-[#fff] lg:text-xl text-sm uppercase font-semibold font-["plus jakarta Sans, san serif"]'>ready to take your business next level?</h2>
              <div className='font-semibold'><h1 className='text-[#fff] lg:text-3xl text-xl pl-6 font-["plus jakarta Sans, san serif"]'>Request a demo of any of our products today and see how</h1>
              <h1 className='text-[#fff] lg:text-3xl text-xl font-["plus jakarta Sans, san serif"]'>they can help you streamline your operations & boost revenue!</h1></div>
-             <button className='bg-[#f2a341] uppercase px-7 py-4 rounded-full text-[#fff] text-base font-bold font-["poppins, san serif"] hover:bg-white hover:text-[#f2a341]'>get started today!</button>
+             <Link to="/marketplace"><button className='bg-[#f2a341] uppercase px-7 py-4 rounded-full text-[#fff] text-base font-bold font-["poppins, san serif"] hover:bg-white hover:text-[#f2a341]'>get started today!</button></Link>
             </div>
           </section>
 
