@@ -1,7 +1,7 @@
 import React from "react";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import Navbar from "../components/NavBar";
-
+import BackToTop from "../components/BackToTop";
 const Contact = () => {
   return (
     
@@ -17,7 +17,7 @@ const Contact = () => {
           Get in touch with our team — we’d love to hear your thoughts, questions, or feedback.
         </p>
       </div>
-
+      <BackToTop />
       {/* Main Contact Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 bg-transparent shadow-2xl my-20 rounded-2xl overflow-hidden">
         {/* Left Section */}
