@@ -6,6 +6,10 @@ import Products from '../components/Products'
 import Partners from '../components/Partners'
 import Testimonials from '../components/Testimonials'
 import Request from '../components/Request'
+import BackToTop from '../components/BackToTop'
+//import SaaSProductList from '../components/SaaSProductList'
+//import SaaSAppList from '../components/SaaSAppList'
+//import AppMarket from '../components/AppMarket'
 import Footer from '../components/Footer'
 import AuthPage from './AuthPage'
 
@@ -20,6 +24,9 @@ const Home = () => {
         <Partners />
         <Testimonials />  
         <Request />
+        {/* <SaaSProductList /> */}
+        {/* <SaaSAppList /> */}
+        {/* <AppMarket /> */}
         <Footer />
     </div>
 

@@ -9,18 +9,17 @@ import { SiCookiecutter } from 'react-icons/si'
 import { FaFacebook } from 'react-icons/fa'
 import { BsInstagram, BsTwitter } from 'react-icons/bs'
 import { LiaLinkedin } from 'react-icons/lia'
-import { Link } from 'react-router-dom'
 
 const ProductPage = () => {
 
-    const [isMobileNav, setIsMobileNav ] = useState("false");
+    // const [isMobileNav, setIsMobileNav ] = useState("false");
 
-    const mobileNav = () => {
-        setIsMobileNav(!isMobileNav);
-    }
+    // const mobileNav = () => {
+    //     setIsMobileNav(!isMobileNav);
+    // }
   return (
     <section className='bg-[#def1ef]'>
-        <nav className='flex justify-between lg:px-20 py-5'>
+        {/* <nav className='flex justify-between lg:px-20 py-5'>
             <img src={logo}></img>
             <ul className='lg:flex gap-7 capitalize text-[#6EC1E4] text-lg font-["plus jakarta Sans, san serif"] cursor-pointer hidden'>
                 <li className='hover:text-orange-400'>home</li>
@@ -30,7 +29,8 @@ const ProductPage = () => {
                 <li className='hover:text-orange-400'>contact</li>
             </ul>
             <button onClick={mobileNav} className='lg:hidden pr-2 bg-white text-[#31587c] px-3 py-2 text-xl border-[1px] border-[#6EC1E4]'>{isMobileNav? <IoClose/> :<GiHamburgerMenu />}</button>
-        </nav>
+        </nav> */}
+        <NavBar />
         <div className=' h-40 flex flex-col gap-7 mt-[82px] justify-center w-full'>
           <h1 className='text-[68px] text-[#31587c] font-[600] text-center capitalize font-["plus jakarta Sans, san serif"]'>products</h1>
           <h3 className='text-center text-[17px] px-3 text-[#32597dc4] font-["poppins, san serif"]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec<br/> ullamcorper mattis, pulvinar dapibus leo.</h3>
@@ -49,6 +49,7 @@ const ProductPage = () => {
           </div>
          </div>
         </section>
+        <BackToTop />
         {/* Another section */}
         <section className='lg:flex px-12 mt-20'>
            <div className='lg:w-[25%]'>
@@ -229,7 +230,7 @@ const ProductPage = () => {
 
           {/* Mobile navbar */}
 
-         {isMobileNav && <nav className='bg-[#ccf5ee] absolute top-0 w-[100%] mt-28 h-[400px] lg:hidden'>
+         {/* {isMobileNav && <nav className='bg-[#ccf5ee] absolute top-0 w-[100%] mt-28 h-[400px] lg:hidden'>
            <ul className='capitalize flex flex-col gap-10 px-4 pt-12 text-base'>
             <li className=' text-[#1ca6af] cursor-pointer hover:text-[#f2a341]'>home</li>
             <li className=' text-[#1ca6af] cursor-pointer hover:text-[#f2a341]'>about us</li>
@@ -237,7 +238,7 @@ const ProductPage = () => {
             <li className=' text-[#1ca6af] cursor-pointer hover:text-[#f2a341]'>features</li>
             <li className=' text-[#1ca6af] cursor-pointer hover:text-[#f2a341]'>contact</li>
             </ul> 
-          </nav>}
+          </nav>} */}
     </section>
   )
 }
