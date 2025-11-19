@@ -1,6 +1,9 @@
 import React from "react";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from "lucide-react";
 
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import Navbar from "../components/NavBar";
+import BackToTop from "../components/BackToTop";
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +33,28 @@ const Contact = () => {
           </h1>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg">
             Get in touch with our team — we’d love to hear your thoughts, questions, or feedback.
+    
+
+    <section className="min-h-screen bg-gradient-to-b from-gray-200 to-gray-200 flex flex-col justify-center">   
+      <Navbar />
+      {/* Header Section */}
+      <div className="text-center mb-10">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-blue-900 mb-4">
+          Contact Us
+        </h1>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Get in touch with our team — we’d love to hear your thoughts, questions, or feedback.
+        </p>
+      </div>
+      <BackToTop />
+      {/* Main Contact Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 bg-transparent shadow-2xl my-20 rounded-2xl overflow-hidden">
+        {/* Left Section */}
+        <div className="bg-transparent text-blue-950 p-10 flex flex-col justify-center space-y-6">
+          <h2 className="text-3xl font-semibold">Let’s Connect</h2>
+          <p className="text-blue-950 leading-relaxed">
+            Whether you have a question about features, pricing, or anything else —
+            our friendly support team is ready to help.
           </p>
         </div>
 
