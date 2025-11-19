@@ -1,15 +1,14 @@
 // components/Layout.jsx
-import React from 'react';
-import Sidebar from '../components/Sidebar';
-import Topbar from './components/Topbar';
+import { Sidebar } from "./Sidebar";
+import { Topbar } from "./Topbar";
 
-export default function Layout({ mode, setMode, children }) {
+export function Layout({ children }) {
   return (
-    <div className="flex h-screen w-full bg-gray-100">
-      <Sidebar mode={mode} setMode={setMode} />
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <Topbar mode={mode} />
-        <main className="flex-1 overflow-y-auto p-4">{children}</main>
+    <div className="flex min-h-screen bg-gray-50">
+      <Sidebar />
+      <div className="flex-1 flex flex-col">
+        <Topbar />
+        <div className="p-6 flex-1">{children}</div>
       </div>
     </div>
   );

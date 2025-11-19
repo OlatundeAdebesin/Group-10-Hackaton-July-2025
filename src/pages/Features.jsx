@@ -7,6 +7,8 @@ import logo4 from "../assets/logo4.png"
 import Image1 from "../assets/img-001.png"
 import Image2 from "../assets/img-002.png"
 import Image3 from "../assets/img-003.png"
+import BackToTop from "../components/BackToTop"
+
 const Features = () => {
   return (
     <>
@@ -39,7 +41,7 @@ const Features = () => {
         <img src={Image1} className='lg:w-[650px] w-[350px]'></img>
        </div>
        </div>
-
+      <BackToTop />
         <div className='lg:flex lg:flex-row flex flex-col-reverse pt-[100px] gap-3 items-center'>
          <div className='lg:w-[60%]'>
         <img src={Image2} className='lg:w-[650px] w-[350px]'></img>
@@ -60,7 +62,7 @@ const Features = () => {
           <h1 className='text-xl capitalize text-center text-[#31587c] font-semibold ml-5'>CRM manager</h1>
       </div>
       <div className='flex justify-center items-center'>
-         <h1 className='lg:text-4xl text-[20px] mt-8 font-[500] font-["plus jakarta Sans, san serif"] text-[#31587c]'>Powerful customer relationship management (CRM) tool that enables you to manage customer data and track interactions</h1>
+         <h1 className='lg:text-3xl text-[20px] px-14 mt-8 font-[500] font-["plus jakarta Sans, san serif"] text-[#31587c]'>Powerful customer relationship management (CRM) tool that enables you to manage customer data and track interactions</h1>
       </div>
        </div>
        {/* Another section */}

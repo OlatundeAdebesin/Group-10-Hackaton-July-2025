@@ -2,6 +2,17 @@ import React, { useState } from 'react';
 import { Menu, Layers, Star, ShoppingCart, DollarSign, User, Search, Heart, TrendingUp, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SaaSProducts from '../components/SaaSProducts';
+import SellerDashboard from '../components/SellerDashbooard';
+import MyListings from '../components/MyListings';
+import Payments from '../components/Payments';
+import Account from '../components/Account';
+import { Package, ArrowUpRight, ArrowDownRight, Download, Eye, Edit, Trash2, Plus, CheckCircle, Clock, XCircle, CreditCard, Calendar, Filter, MoreVertical } from 'lucide-react';
+import {FeaturedApps} from './FeaturedApps';
+import { MyOrders } from './MyOrders';
+import { Wishlist } from './Wishlist';
+import { Profile } from './Profile';
+import { ExternalLink, MessageSquare, AlertCircle, Tag, Award, Zap, Shield } from 'lucide-react';
+
 
 function Button({ children, variant, size, className, ...rest }) {
   const base = 'inline-flex items-center justify-center rounded-md transition-colors';
@@ -174,17 +185,19 @@ export default function Dashboard() {
         </CardContent>
       </Card>
     </div></CardContent></Card>,
-    Featured: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Featured Apps</h2><p className="text-gray-700">Top picks for you.</p></CardContent></Card>,
-    'My Orders': <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">My Orders</h2><p className="text-gray-700">Track your purchases and downloads.</p></CardContent></Card>,
-    Wishlist: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Wishlist</h2><p className="text-gray-700">Your saved apps for later.</p></CardContent></Card>,
-    Profile: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Profile</h2><p className="text-gray-700">Manage your account and settings.</p></CardContent></Card>
+    Featured: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Featured Apps</h2><p className="text-gray-700">Top picks just for you.</p><FeaturedApps /></CardContent></Card>,
+    'My Orders': <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">My Orders</h2><p className="text-gray-700">Track your purchases and downloads.</p><MyOrders /></CardContent></Card>,
+    Wishlist: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><Wishlist /></CardContent></Card>,
+    Profile: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Profile</h2><p className="text-gray-700">Manage your account and settings.</p><Profile /></CardContent></Card>
   };
 
   const sellerPages = {
-    Dashboard: <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">Seller Dashboard</h2><p className="text-gray-700">Overview of your performance.</p></CardContent></Card>,
-    'My Listings': <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">My Listings</h2><p className="text-gray-700">Manage your uploaded apps.</p></CardContent></Card>,
-    Payments: <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">Payments</h2><p className="text-gray-700">View sales and payouts.</p></CardContent></Card>,
-    Account: <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">Account Settings</h2><p className="text-gray-700">Update your seller profile.</p></CardContent></Card>
+    Dashboard: <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">Seller Dashboard</h2><p className="text-gray-700">Overview of your performance.</p><SellerDashboard /> </CardContent></Card>,
+    DashboardComponent: <SellerDashboard />,
+
+    'My Listings': <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">My Listings</h2><p className="text-gray-700">Manage your uploaded apps.</p><MyListings /></CardContent></Card>,
+    Payments: <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">Payments</h2><p className="text-gray-700">View sales and payouts.</p><Payments /></CardContent></Card>,
+    Account: <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">Account Settings</h2><p className="text-gray-700">Update your seller profile.</p><Account /></CardContent></Card>
   };
 
   const currentPage = isSellerView ? sellerPages[activePage] || Object.values(sellerPages)[0] : buyerPages[activePage] || Object.values(buyerPages)[0];

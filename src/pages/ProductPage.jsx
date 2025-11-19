@@ -10,6 +10,7 @@ import { FaFacebook } from 'react-icons/fa'
 import { BsInstagram, BsTwitter } from 'react-icons/bs'
 import { LiaLinkedin } from 'react-icons/lia'
 import NavBar from '../components/NavBar'
+import BackToTop from '../components/BackToTop'
 
 const ProductPage = () => {
 
@@ -50,6 +51,7 @@ const ProductPage = () => {
           </div>
          </div>
         </section>
+        <BackToTop />
         {/* Another section */}
         <section className='lg:flex px-12 mt-20'>
            <div className='lg:w-[25%]'>
