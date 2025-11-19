@@ -6,7 +6,7 @@ const History = () => (
     <div className="mb-10">
       <h3 className="text-3xl font-bold text-gray-800 mb-4">Our History</h3>
       <p className="text-gray-600 mb-6">
-        Since our founding in 2010, we’ve built lasting relationships with our customers through trust, 
+        Since our founding in 2025, we’ve built lasting relationships with our customers through trust, 
         respect, and innovation. Our journey reflects our commitment to excellence.
       </p>
 
