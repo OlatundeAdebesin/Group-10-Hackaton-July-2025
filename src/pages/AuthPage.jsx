@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check, Github, Chrome, LockIcon, EyeIcon, MailCheck, MailCheckIcon, CheckCheck } from 'lucide-react';
+import {  User, ArrowRight, LockIcon, EyeIcon, MailCheck, CheckCheck } from 'lucide-react';
 import { FiEyeOff } from 'react-icons/fi';
 import { DiGithubBadge } from 'react-icons/di';
 import { FaChrome } from 'react-icons/fa';
@@ -177,10 +177,10 @@ export default function AuthPage() {
 
       <div className="w-full max-w-md relative z-10">
         {/* Card */}
-        <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-white/20">
+        <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-2xl p-6 border border-white/20">
           {/* Logo/Brand */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl mb-4 shadow-lg transform hover:scale-105 transition-transform duration-200">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl mb-4 shadow-lg transform hover:scale-105 transition-transform duration-200">
               <LockIcon className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
@@ -194,7 +194,7 @@ export default function AuthPage() {
           {!showForgotPassword ? (
             <>
               {/* Divider */}
-              <div className="relative mb-6">
+              <div className="relative mb-4">
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-gray-300"></div>
                 </div>
@@ -204,7 +204,7 @@ export default function AuthPage() {
               </div>
 
           {/* Form */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {/* Name Field (Sign Up Only) */}
             {isSignUp && (
               <div className="slide-in">
@@ -228,7 +228,7 @@ export default function AuthPage() {
 
             {/* Email Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Email Address
               </label>
               <div className="relative">
@@ -247,7 +247,7 @@ export default function AuthPage() {
 
             {/* Password Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Password
               </label>
               <div className="relative">
