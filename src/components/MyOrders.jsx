@@ -3,6 +3,7 @@ import { Star, Package, Download, ExternalLink, MessageSquare, AlertCircle, Chec
 import { Card } from './Card';
 import { CardContent } from './CardContent';
 import { Button } from './Button';
+import { Link } from 'react-router-dom';
 
 // ==================== MY ORDERS COMPONENT ====================
 export function MyOrders() {
@@ -87,10 +88,10 @@ export function MyOrders() {
           {/* <h2 className="text-3xl font-bold text-[#1CA6AF]">My Orders</h2>
           <p className="text-gray-600 mt-1">Track your purchases and downloads</p> */}
         </div>
-        <Button className="gap-2">
+        {/* <Button className="gap-2">
           <Download size={16} />
           Download Invoice
-        </Button>
+        </Button> */}
       </div>
 
       {/* Stats */}
@@ -174,18 +175,18 @@ export function MyOrders() {
                   <div className="flex gap-2 pt-2">
                     {order.downloadLink ? (
                       <>
-                        <Button size="sm" className="gap-2">
+                        {/* <Button size="sm" className="gap-2">
                           <Download size={14} />
                           Download
                         </Button>
-                        <Button variant="outline" size="sm" className="gap-2">
+                        {/* <Button variant="outline" size="sm" className="gap-2">
                           <ExternalLink size={14} />
                           View Details
-                        </Button>
-                        <Button variant="ghost" size="sm" className="gap-2">
+                        </Button> */}
+                        {/* <Button variant="ghost" size="sm" className="gap-2">
                           <MessageSquare size={14} />
                           Support
-                        </Button>
+                        </Button> */} 
                       </>
                     ) : (
                       <Button variant="outline" size="sm" disabled>
@@ -211,9 +212,11 @@ export function MyOrders() {
               <p className="text-sm text-blue-700 mb-3">
                 Having trouble with your order? Our support team is here to help 24/7.
               </p>
+              <Link to = "/Contact">
               <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
                 Contact Support
               </Button>
+              </Link>
             </div>
           </div>
         </CardContent>

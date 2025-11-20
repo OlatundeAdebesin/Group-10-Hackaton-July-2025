@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/NavBar";
 import HeroSection from "../components/HeroSection2";
 import WhoWeAre from "../components/WhoWeAre";
 import MissionValues from "../components/MissionValues";
@@ -11,7 +12,7 @@ import Footer from "../components/Footer";
 const About = () => {
   return (
     <div className="bg-[#def1ef] font-sans text-[#31587C]">
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroSection />
       <WhoWeAre />
       <MissionValues />

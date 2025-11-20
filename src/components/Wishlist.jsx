@@ -3,6 +3,7 @@ import { Star, Package, Download, ExternalLink, MessageSquare, AlertCircle, Chec
 import { Card } from './Card';
 import { CardContent } from './CardContent';
 import { Button } from './Button';
+import { Link } from 'react-router-dom';
 
 // ==================== WISHLIST COMPONENT ====================
 export function Wishlist() {
@@ -68,8 +69,8 @@ export function Wishlist() {
   ];
 
   const collections = [
-    { name: 'Productivity Bundle', items: 3, savings: '$200' },
-    { name: 'Marketing Suite', items: 2, savings: '$150' }
+    // { name: 'Productivity Bundle', items: 3, savings: '$200' },
+    // { name: 'Marketing Suite', items: 2, savings: '$150' }
   ];
 
   return (
@@ -79,7 +80,7 @@ export function Wishlist() {
           <h2 className="text-xl font-bold text-[#1CA6AF]">My Wishlist</h2>
           <p className="text-gray-600 mt-1">Save apps for later and track price drops</p>
         </div>
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
@@ -94,7 +95,7 @@ export function Wishlist() {
             <ShoppingCart size={16} />
             Add All to Cart
           </Button>
-        </div>
+        </div> */}
       </div>
 
       {/* Wishlist Stats */}
@@ -211,17 +212,18 @@ export function Wishlist() {
               </div>
               
               <div className="flex gap-2 mt-4 pt-4 border-t border-gray-100">
+                <Link to = "/subs">
                 <Button size="sm" className="flex-1 gap-2" disabled={!item.inStock}>
                   <ShoppingCart size={14} />
-                  {item.inStock ? 'Add to Cart' : 'Notify Me'}
-                </Button>
-                <Button variant="outline" size="sm" className="gap-2">
+                  {item.inStock ? 'Subscribe' : 'Notify Me'}
+                </Button></Link>
+                {/* <Button variant="outline" size="sm" className="gap-2">
                   <ExternalLink size={14} />
                   View
                 </Button>
                 <Button variant="ghost" size="icon" className="text-red-500 hover:bg-red-50">
                   <Trash2 size={16} />
-                </Button>
+                </Button> */}
               </div>
             </CardContent>
           </Card>
@@ -240,9 +242,9 @@ export function Wishlist() {
               <p className="text-sm text-gray-700 mb-3">
                 2 apps in your wishlist have dropped in price. Don't miss out on these deals!
               </p>
-              <Button size="sm" className="bg-green-600 hover:bg-green-700">
+              {/* <Button size="sm" className="bg-green-600 hover:bg-green-700">
                 View Deals
-              </Button>
+              </Button> */}
             </div>
           </div>
         </CardContent>

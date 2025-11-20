@@ -3,6 +3,7 @@ import { Star, Package, Download, ExternalLink, MessageSquare, AlertCircle, Chec
 import { Card } from './Card';
 import { CardContent } from './CardContent';
 import { Button } from './Button';
+import { Link } from 'react-router-dom';
 // ==================== FEATURED APPS COMPONENT ====================
 export function FeaturedApps() {
   const featuredCategories = [
@@ -36,8 +37,8 @@ export function FeaturedApps() {
   ];
 
   const deals = [
-    { name: 'Black Friday Sale', discount: '50%', endsIn: '2 days', color: 'bg-purple-500' },
-    { name: 'Limited Offer', discount: '30%', endsIn: '1 week', color: 'bg-pink-500' },
+    // { name: 'Black Friday Sale', discount: '50%', endsIn: '2 days', color: 'bg-purple-500' },
+    // { name: 'Limited Offer', discount: '30%', endsIn: '1 week', color: 'bg-pink-500' },
     // { name: 'Bundle Deal', discount: '40%', endsIn: '5 days', color: 'bg-orange-500' },
   ];
 
@@ -48,10 +49,10 @@ export function FeaturedApps() {
           {/* <h2 className="text-3xl font-bold text-[#1CA6AF]">Featured Apps</h2>
           <p className="text-gray-600 mt-1">Hand-picked selections just for you</p> */}
         </div>
-        <Button className="gap-2">
+        {/* <Button className="gap-2">
           <Filter size={16} />
           Filter
-        </Button>
+        </Button> */}
       </div>
 
       {/* Special Deals Banner */}
@@ -110,10 +111,12 @@ export function FeaturedApps() {
                   </div>
                   
                   <div className="flex gap-2">
-                    <Button className="flex-1">View Details</Button>
+                    <Link to = "/subs">
+                    <Button className="flex-1">Subscribe</Button>
                     <Button variant="outline" size="icon">
-                      <Heart size={16} />
+                      {/* <Heart size={16} /> */}
                     </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
