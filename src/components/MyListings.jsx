@@ -126,7 +126,7 @@ export default function MyListings() {
                         <p className="font-semibold text-gray-900">{listing.rating || 'N/A'}</p>
                       </div>
                     </div>
-                    <div className="flex items-end gap-2">
+                    {/* <div className="flex items-end gap-2">
                       <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Edit">
                         <Edit size={16} />
                       </button>
@@ -136,7 +136,7 @@ export default function MyListings() {
                       <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Delete">
                         <Trash2 size={16} className="text-red-500" />
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
