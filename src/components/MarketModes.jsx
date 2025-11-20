@@ -5,7 +5,7 @@ import SaaSProducts from '../components/SaaSProducts';
 import SellerDashboard from '../components/SellerDashbooard';
 import MyListings from './MyListings';
 import Payments from '../components/Payments';
-import Account from '../components/Account';
+import Account from '../components/Accounts';
 import { Package, ArrowUpRight, ArrowDownRight, Download, Eye, Edit, Trash2, Plus, CheckCircle, Clock, XCircle, CreditCard, Calendar, Filter, MoreVertical } from 'lucide-react';
 import {FeaturedApps} from './FeaturedApps';
 import { MyOrders } from './MyOrders';

@@ -16,7 +16,7 @@ const Contact = () => {
       <div className="h-20 lg:h-28"></div> */}
 
       <Navbar />
-      <BackToTop /> *
+      
 
       <section className="relative min-h-screen bg-gradient-to-b from-gray-200 to-gray-200 px-6 py-12">
 
@@ -96,6 +96,7 @@ const Contact = () => {
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-orange-200 focus:border-orange-500 outline-none transition"
               />
             </div>
+            <BackToTop />
 <div>
               <label className="block mb-2 text-sm font-semibold text-gray-700">
                 Message <span className="text-red-600">*</span>
