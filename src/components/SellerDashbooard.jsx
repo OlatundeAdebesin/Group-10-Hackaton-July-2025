@@ -34,10 +34,10 @@ export default function SellerDashboard() {
           {/* <h2 className="text-3xl font-bold text-[#31587c]">Dashboard Overview</h2>
           <p className="text-gray-600 mt-1">Track your sales performance and analytics</p> */}
         </div>
-        <Button className="gap-2">
+        {/* <Button className="gap-2">
           <Download size={16} />
           Export Report
-        </Button>
+        </Button> */}
       </div>
 
       {/* Stats Grid */}

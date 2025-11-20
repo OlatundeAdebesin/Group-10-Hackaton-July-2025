@@ -12,22 +12,22 @@ const Contact = () => {
 
   return (
     <>
-      {/* Space for fixed Navbar
-      <div className="h-20 lg:h-28"></div>
+      {/* * Space for fixed Navbar
+      <div className="h-20 lg:h-28"></div> */}
 
       <Navbar />
-      <BackToTop /> */}
+      <BackToTop /> *
 
       <section className="relative min-h-screen bg-gradient-to-b from-gray-200 to-gray-200 px-6 py-12">
 
         {/* Logo Top-Left Corner */}
-        <div className="absolute top-6 left-6 z-40">
+        {/* <div className="absolute top-6 left-6 z-40">
           <img
             src="https://websitedemos.net/saas-app-company-04/wp-content/uploads/sites/1180/2025/08/Logo.svg"
             alt="Hackhathon Group 10"
             className="h-12 md:h-14"
           />
-        </div>
+        </div> */}
 
         {/* Header */}
         <div className="text-center mt-24 mb-16">
@@ -96,8 +96,7 @@ const Contact = () => {
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-orange-200 focus:border-orange-500 outline-none transition"
               />
             </div>
-
-            <div>
+<div>
               <label className="block mb-2 text-sm font-semibold text-gray-700">
                 Message <span className="text-red-600">*</span>
               </label>
@@ -172,7 +171,7 @@ const Contact = () => {
               </ul>
             </div>
 
-            {/* Contact Info + Social Icons */}
+{/* Contact Info + Social Icons */}
             <div>
               <h3 className="text-lg font-bold mb-4 text-blue-950">Contact</h3>
               <p className="text-lg font-semibold leading-relaxed mb-6 text-gray-800">

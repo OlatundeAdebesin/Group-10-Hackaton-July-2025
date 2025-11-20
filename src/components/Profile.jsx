@@ -46,9 +46,9 @@ export function Profile() {
                 <span className="text-sm opacity-90">Joined October 2024</span>
               </div>
             </div>
-            <Button variant="outline" className="bg-white text-[#1CA6AF] hover:bg-white/90 border-white">
+            {/* <Button variant="outline" className="bg-white text-[#1CA6AF] hover:bg-white/90 border-white">
               Edit Profile
-            </Button>
+            </Button> */}
           </div>
         </CardContent>
       </Card>
@@ -113,7 +113,7 @@ export function Profile() {
             </CardContent>
           </Card>
 
-          <Card>
+          {/* <Card>
             <CardContent>
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
               <div className="space-y-2">
@@ -135,7 +135,7 @@ export function Profile() {
                 </Button>
               </div>
             </CardContent>
-          </Card>
+          </Card> */}
         </div>
       )}
 
@@ -167,10 +167,10 @@ export function Profile() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Bio</label>
                 <textarea rows={4} defaultValue="Software enthusiast and SaaS lover. Always looking for tools to boost productivity." className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1CA6AF]" />
               </div>
-              <div className="flex gap-2 pt-4">
+              {/* <div className="flex gap-2 pt-4">
                 <Button>Save Changes</Button>
                 <Button variant="outline">Cancel</Button>
-              </div>
+              </div> */}
             </div>
           </CardContent>
         </Card>
@@ -191,16 +191,16 @@ export function Profile() {
                   <Button>Update Password</Button>
                 </div>
               </div>
-              <div className="p-4 rounded-lg bg-gray-50">
+              {/* <div className="p-4 rounded-lg bg-gray-50">
                 <h4 className="font-medium text-gray-900 mb-2">Two-Factor Authentication</h4>
                 <p className="text-sm text-gray-600 mb-3">Add an extra layer of security to your account</p>
                 <Button variant="outline">Enable 2FA</Button>
-              </div>
-              <div className="p-4 rounded-lg bg-gray-50">
+              </div> */}
+              {/* <div className="p-4 rounded-lg bg-gray-50">
                 <h4 className="font-medium text-gray-900 mb-2">Active Sessions</h4>
                 <p className="text-sm text-gray-600 mb-3">Manage devices where you're currently logged in</p>
                 <Button variant="outline">View Sessions</Button>
-              </div>
+              </div> */}
             </div>
           </CardContent>
         </Card>

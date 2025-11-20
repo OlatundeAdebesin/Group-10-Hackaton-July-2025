@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import { Card } from "../components/Card";
 import { CardContent } from "../components/CardContent";
 import { Button } from "../components/Button";
+import { Link } from "react-router-dom";
 
 const demoProducts = [
   { id: 1, name: "AdBoost Pro", category: "Marketing", price: 29, developer: "AdLabs", description: "Automated ad optimization for social and search campaigns.", rating: 4.8 },
@@ -177,12 +178,14 @@ export default function SaaSProductList({ query = "", mode = "buyer", sellerOnly
                 <p className="text-sm mt-1 font-semibold text-orange-500">⭐ {p.rating}</p>
 
                 <div className="flex gap-2 mt-3">
-                  <Button className="bg-[#31587c] text-white px-4 py-2 rounded-xl w-full" onClick={() => alert(`Preview: ${p.name}`)}>
+                  {/* <Button className="bg-[#31587c] text-white px-4 py-2 rounded-xl w-full" onClick={() => alert(`Preview: ${p.name}`)}>
                     Preview
+                  </Button> */}
+                  <Link to="/subs">
+                  <Button className="bg-teal-500 text-white px-4 py-2 rounded-xl w-full" >
+                    Subscribe
                   </Button>
-                  <Button className="bg-teal-500 text-white px-4 py-2 rounded-xl w-full" onClick={() => alert(`Buy: ${p.name} — $${p.price}/mo`)}>
-                    Buy
-                  </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -216,3 +219,4 @@ export default function SaaSProductList({ query = "", mode = "buyer", sellerOnly
     </div>
   );
 }
+

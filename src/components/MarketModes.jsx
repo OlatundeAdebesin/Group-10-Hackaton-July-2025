@@ -3,7 +3,7 @@ import { Menu, Layers, Star, ShoppingCart, DollarSign, User, Search, Heart, Tren
 import { motion } from 'framer-motion';
 import SaaSProducts from '../components/SaaSProducts';
 import SellerDashboard from '../components/SellerDashbooard';
-import MyListings from '../components/MyListings';
+import MyListings from './MyListings';
 import Payments from '../components/Payments';
 import Account from '../components/Account';
 import { Package, ArrowUpRight, ArrowDownRight, Download, Eye, Edit, Trash2, Plus, CheckCircle, Clock, XCircle, CreditCard, Calendar, Filter, MoreVertical } from 'lucide-react';
@@ -15,6 +15,7 @@ import { ExternalLink, MessageSquare, AlertCircle, Tag, Award, Zap, Shield } fro
 
 
 function Button({ children, variant, size, className, ...rest }) {
+  
   const base = 'inline-flex items-center justify-center rounded-md transition-colors';
   const sizeClass = size === 'icon' ? 'p-2' : size === 'sm' ? 'px-2 py-1 text-sm' : 'px-3 py-2';
   const variantClass = variant === 'ghost' ? 'bg-transparent hover:bg-white/10' : variant === 'outline' ? 'border border-gray-200 bg-white' : 'bg-[#1CA6AF] text-white';
@@ -129,9 +130,10 @@ function Topbar({ query, setQuery, isSellerView }) {
             <Users size={18} />
           </Button>
         ) : (
-          <Button variant="ghost" size="icon" className="relative hover:bg-white/20 text-black" aria-label="cart">
-            <ShoppingCart size={18} />
-            <span className="absolute -top-1 -right-1 text-xs bg-orange-500 text-white rounded-full w-5 h-5 flex items-center justify-center">2</span>
+          <Button
+          variant="ghost" size="icon" className="relative hover:bg-white/20 text-black" aria-label="cart">
+            {/* <ShoppingCart size={18} />
+            <span className="absolute -top-1 -right-1 text-xs bg-orange-500 text-white rounded-full w-5 h-5 flex items-center justify-center">2</span> */}
           </Button>
         )}
         <div className="rounded-full bg-gray-200 w-8 h-8 flex items-center justify-center text-sm font-medium text-black">OA</div>
@@ -152,7 +154,7 @@ export default function Dashboard() {
     <SaaSProducts />
     
     <div className="grid gap-4 mt-6">
-      <Card className="p-4 bg-white shadow-md border border-gray-200 cursor-pointer hover:shadow-lg transition" onClick={() => alert('View Top Rated Apps')}>
+      {/* <Card className="p-4 bg-white shadow-md border border-gray-200 cursor-pointer hover:shadow-lg transition" onClick={() => alert('View Top Rated Apps')}>
         <CardContent>
           <h3 className="font-semibold text-[#1CA6AF] mb-2">Top Rated Apps</h3>
           <ul className="text-sm text-gray-700 list-disc ml-4">
@@ -183,7 +185,7 @@ export default function Dashboard() {
             <li>DataTrack - 4.6★</li>
           </ul>
         </CardContent>
-      </Card>
+      </Card> */}
     </div></CardContent></Card>,
     Featured: <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">Featured Apps</h2><p className="text-gray-700">Top picks just for you.</p><FeaturedApps /></CardContent></Card>,
     'My Orders': <Card className="p-6 bg-[#1CA6AF]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#1CA6AF]">My Orders</h2><p className="text-gray-700">Track your purchases and downloads.</p><MyOrders /></CardContent></Card>,
@@ -195,9 +197,9 @@ export default function Dashboard() {
     Dashboard: <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">Seller Dashboard</h2><p className="text-gray-700">Overview of your performance.</p><SellerDashboard /> </CardContent></Card>,
     DashboardComponent: <SellerDashboard />,
 
-    'My Listings': <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">My Listings</h2><p className="text-gray-700">Manage your uploaded apps.</p><MyListings /></CardContent></Card>,
-    Payments: <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">Payments</h2><p className="text-gray-700">View sales and payouts.</p><Payments /></CardContent></Card>,
-    Account: <Card className="p-6 bg-[#31587c]/10"><CardContent><h2 className="text-xl font-semibold mb-2 text-[#31587c]">Account Settings</h2><p className="text-gray-700">Update your seller profile.</p><Account /></CardContent></Card>
+    'My Listings': <Card className="p-6 bg-[#31587c]/10"><CardContent><MyListings /></CardContent></Card>,
+    Payments: <Card className="p-6 bg-[#31587c]/10"><CardContent><Payments /></CardContent></Card>,
+    Account: <Card className="p-6 bg-[#31587c]/10"><CardContent><Account /></CardContent></Card>
   };
 
   const currentPage = isSellerView ? sellerPages[activePage] || Object.values(sellerPages)[0] : buyerPages[activePage] || Object.values(buyerPages)[0];

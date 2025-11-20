@@ -34,10 +34,10 @@ export default function Payments() {
           <h2 className="text-3xl font-bold text-[#31587c]">Payments & Earnings</h2>
           <p className="text-gray-600 mt-1">Track your revenue and payout history</p>
         </div>
-        <Button className="gap-2">
+        {/* <Button className="gap-2">
           <Download size={16} />
           Download Statement
-        </Button>
+        </Button> */}
       </div>
 
       {/* Summary Cards */}

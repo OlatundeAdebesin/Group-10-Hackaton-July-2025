@@ -3,9 +3,9 @@
 import React, { createContext, useContext, useState, useMemo, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import { Card } from "../components/Card";
-import { CardContent } from "../components/CardContent";
-import { Button } from "../components/Button";
+import { Card } from "./Card";
+import { CardContent } from "./CardContent";
+import { Button } from "./Button";
 import { X } from "lucide-react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
